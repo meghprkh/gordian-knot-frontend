@@ -18,7 +18,9 @@ module.exports = {
     ],
     "globals": {
         "DEV": false,
-        "PROD": false
+        "PROD": false,
+        "request": false,
+        "authToken": false
     },
     "rules": {
         "indent": [
