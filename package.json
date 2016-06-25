@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "reactpack -O src/index.js",
-    "start": "reactpack --dev src/index.js",
+    "build": "reactpack -O src/index.js --no-inject",
+    "start": "reactpack --dev src/index.js --no-inject",
     "lint": "eslint src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
