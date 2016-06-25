@@ -8,7 +8,7 @@ var NavBar = props => (
     <input id="bmenub" type="checkbox" class="show"/>
     <label htmlFor="bmenub" class="burger pseudo button">&#8801;</label>
     <div class="menu">
-      <a href="/b/42" class="pseudo button">Page 2</a>
+      <a href="/q" class="pseudo button">Questions</a>
       {!authToken ? <a href="/auth" class="button">Login/Register</a> :
                     <a href="/logout" class="button">Logout</a>}
     </div>

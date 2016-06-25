@@ -6,9 +6,9 @@ import { Router, route } from 'preact-router';
 
 import NavBar from './js/navbar'
 import Auth from './js/auth'
+import Question from './js/question'
 
 var Page1 = props => <h1>Hi Page1</h1>
-var Page2 = props => <h1>Hi Page2 {props.id}</h1>
 var NotFound = props => <h1>Sorry, could not find the page with URL <code>{props.url}</code></h1>
 
 class App extends Component {
@@ -44,12 +44,12 @@ class App extends Component {
           <section>
             <Router>
               <Page1 path="/" />
+              <Question path="/q/:qno?" />
 
               <Auth path="/auth" login={this.login}/>
               <Auth path="/auth/register" register login={this.login}/>
               <div path='/logout' ref={() => this.logout()}/>
 
-              <Page2 path="/b/:id?" />
               <NotFound default />
             </Router>
           </section>
