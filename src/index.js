@@ -28,13 +28,13 @@ class App extends Component {
     // Set the authToken and reroute to index page
     window.authToken = authToken
     localStorage.authToken = authToken
-    this.setState({authToken}, route('/'))
+    this.setState({authToken}, () => route('/'))
   }
   logout() {
     // Unset the authToken and reroute to index page
     window.authToken = ''
     localStorage.authToken = authToken
-    this.setState({authToken}, route('/'))
+    this.setState({authToken}, () => route('/'))
   }
   render () {
     return (
