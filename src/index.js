@@ -5,10 +5,10 @@ import { h, render, Component } from 'preact'
 import { Router, route } from 'preact-router';
 
 import NavBar from './js/navbar'
+import Home from './js/home'
 import Auth from './js/auth'
 import Question from './js/question'
 
-var Page1 = props => <h1>Hi Page1</h1>
 var NotFound = props => <h1>Sorry, could not find the page with URL <code>{props.url}</code></h1>
 
 class App extends Component {
@@ -43,7 +43,7 @@ class App extends Component {
         <main style={{padding: '80px'}}>
           <section>
             <Router>
-              <Page1 path="/" />
+              <Home path="/" />
               <Question path="/q/:qno?" />
 
               <Auth path="/auth" login={this.login}/>
